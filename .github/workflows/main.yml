@@ -23,7 +23,7 @@ jobs:
         id: docker_meta
         uses: crazy-max/ghaction-docker-meta@v1
         with:
-          images: ghcr.io/kblcuk/krane-container
+          images: ghcr.io/SharkPunch/krane-container
           tag-sha: true
           tag-semver: |
             {{version}}

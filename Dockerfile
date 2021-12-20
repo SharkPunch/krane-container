@@ -11,4 +11,8 @@ RUN curl -L https://storage.googleapis.com/kubernetes-release/release/${KUBECTL_
 RUN curl -L https://github.com/Shopify/ejson/releases/download/v${EJSON_VERSION}/ejson-${EJSON_VERSION}.gem \
   -o ejson-${EJSON_VERSION}.gem \
   && gem install --local ejson-${EJSON_VERSION}.gem
+
+# Pinning to v6 activesupport, since v7 causes krane to crash
+# https://github.com/Shopify/krane/issues/851
+RUN gem install activesupport -v 6.1.4.4
 RUN gem install krane -v $KRANE_VERSION

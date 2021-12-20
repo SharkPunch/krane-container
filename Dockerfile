@@ -1,8 +1,9 @@
 FROM ruby:3.0.3
 
-ENV KUBECTL_VERSION=v1.20.2
-ENV EJSON_VERSION=1.2.2
-ENV KRANE_VERSION=2.1.6
+ENV KUBECTL_VERSION=v1.21.8
+ENV EJSON_VERSION=1.3.0
+ENV KRANE_VERSION=2.3.4
+
 
 RUN curl -L https://storage.googleapis.com/kubernetes-release/release/${KUBECTL_VERSION}/bin/linux/amd64/kubectl -o /usr/local/bin/kubectl \
     && chmod +x /usr/local/bin/kubectl
